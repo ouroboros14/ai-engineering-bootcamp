@@ -1,0 +1,10 @@
+first_number = int(input("Enter your first number for calculation: "))
+second_number = int(input("Enter your second number for calculation: "))
+
+print("The sum of given numbers is:", first_number + second_number)
+print("The difference of given numbers is:", first_number - second_number)
+print("The product of given numbers is:", first_number * second_number)
+print("The division of given numbers is:", first_number / second_number)
+print("The floor division of given numbers is:", first_number // second_number)
+print("The modulus of given numbers is:", first_number % second_number)
+print("The exponentiation of given numbers is:", first_number ** second_number)
