@@ -41,7 +41,7 @@ while True:
 
     # If the user chooses option 3, prompt for an item to be removed from the inventory.
     elif user_choice == "3":
-        remove_item = input("Enter the item to remove: ")
+        remove_item = input("Enter the item to remove: ").strip().title()
         if remove_item in grocery_list:
             grocery_list.remove(remove_item)
             print(f"{remove_item} has been removed from the inventory.")
@@ -50,11 +50,11 @@ while True:
 
     # If the user chooses option 4, prompt for an item to be replaced in the inventory.
     elif user_choice == "4":
-        old_item = input("Enter the item to replace: ")
-        if old_item == new_item:
+        old_item = input("Enter the item to replace: ").strip().title()
+        if old_item in grocery_list:
+            new_item = input("Enter the new item: ").strip().title()
+        elif old_item == new_item:
             print("Both items are the same.")
-        elif old_item in grocery_list:
-            new_item = input("Enter the new item: ")
             index = grocery_list.index(old_item)
             grocery_list[index] = new_item
             print(f"{old_item} has been replaced with {new_item}.")
